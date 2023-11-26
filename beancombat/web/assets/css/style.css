@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #0981d1, #52a1d6, #83b3d3, #d0dae1);
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.additional-logo {
+    width: 512px; /* Set the width of the additional logo */
+    height: 512px; /* Set the height of the additional logo */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.loading-bar-container {
+    position: relative;
+    width: 90%; /* Adjust the width as needed for the loading bar */
+    max-width: 400px; /* Set a maximum width for larger screens */
+    height: 15px; /* Adjust the height as needed for the loading bar */
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px auto; /* Center the loading bar */
+    border: 2px solid #544628; /* Add a border to the loading bar */
+}
+
+.loading-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #ac9052; /* Background color for the loading bar */
+    transition: width 2s ease; /* Adjust the transition duration as needed */
+}
+
+.logo-below {
+    width: 50%; /* Adjust the width as needed for the bottom logo */
+    max-width: 300px; /* Set a maximum width for larger screens */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+#content {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .loading-bar-container {
+        width: 90%;
+    }
+
+    .logo-below {
+        width: 90%;
+    }
+
+    .additional-logo {
+        width: 90%; /* Adjust the width for smaller screens */
+        max-width: 300px; /* Set a maximum width for smaller screens */
+    }
+}

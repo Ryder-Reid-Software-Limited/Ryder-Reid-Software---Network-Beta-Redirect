@@ -16,3 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     simulateLoading();
 });
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault();
+});

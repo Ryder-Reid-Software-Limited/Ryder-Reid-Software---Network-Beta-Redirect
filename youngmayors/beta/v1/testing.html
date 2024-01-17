@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <script src="./assets/js/console-logs.js"></script>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#" class="navbar-brand">Your Logo</a>
+    <div class="menu-icon" onclick="toggleMenu">&#9776;</div>
+    <ul class="navbar-menu" id="navbar-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</div>
+
+    <div id="background"></div>
+    <div id="content">
+        <p id="header-text">Trees Planted by the Youth Council</p>
+        <!-- Counter -->
+        <p id="counter">0</p>
+    </div>
+
+<footer class="footer">
+    <div class="acknowledgement">
+      <img src="./assets/images/aboriginal_flag_1_0.png" alt="Aboriginal Flag" class="flag">
+      <img src="./assets/images/TSI_flag.jpg" alt="Torres Strait Islander Flag" class="flag">
+      <p>Ryder Reid Software&reg; acknowledges the five traditional owners of the 
+        Wimmera Southern Mallee Region; the
+        Wotjobaluk, Jaadwa, Jadawadjali, Wergaia and Jupagulk people. We pay our respects to the elders, both
+        past and present, and emerging.</p>
+    </div>
+    <p class="acknowledgement" style="padding-top: 25px; font-size: 14px;">
+      &copy; 2024 Ryder Reid Software. Under an exclusive license to Young Mayors of Horsham Victoria.
+    </p>
+  </footer>
+
+
+<script>
+     // Set the target number for the counter
+     var targetNumber = 69;
+
+// Function to update the counter value
+function updateCounter(value) {
+    document.getElementById("counter").innerHTML = value;
+}
+
+// Function to slowly increment the counter with a smooth and bouncy transition
+function slowIncrementCounter() {
+    var currentCount = parseInt(document.getElementById("counter").innerHTML);
+    if (currentCount < targetNumber) {
+        // Increment the counter
+        var newCount = currentCount + 1;
+
+        // Update the counter value
+        updateCounter(newCount);
+
+        // Call the function recursively after a longer delay (slower speed)
+        setTimeout(slowIncrementCounter, 250); // Increased delay to slow down the counter
+    }
+}
+
+// Slowly increment the counter with smooth and bouncy transition on page load
+slowIncrementCounter();
+</script>
+
+<script>
+  function toggleMenu() {
+        const navbarMenu = document.getElementById('navbar-menu');
+        navbarMenu.classList.toggle('show');
+    }
+</script>
+
+</body>
+</html>
